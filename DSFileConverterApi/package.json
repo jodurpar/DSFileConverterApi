@@ -1,0 +1,38 @@
+{
+  "name": "dsfile-converter-api",
+  "version": "0.0.0",
+  "description": "DSFileConverterApi",
+  "main": "app.js",
+  "author": {
+    "name": ""
+  },
+  "scripts": {
+    "build": "tsc --build",
+    "clean": "tsc --build --clean",
+    "start:dev": "webpack --config webpack.config.js --watch"
+  },
+  "devDependencies": {
+    "@types/jest": "^28.1.7",
+    "@types/node": "^14.14.7",
+    "run-script-webpack-plugin": "^0.1.1",
+    "ts-loader": "^9.3.1",
+    "typescript": "^4.0.5",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-node-externals": "^3.0.0"
+  },
+  "dependencies": {
+    "@nestjs/common": "^9.0.11",
+    "@nestjs/config": "^2.2.0",
+    "@nestjs/core": "^9.0.9",
+    "@nestjs/platform-express": "^9.0.9",
+    "@nestjs/swagger": "^6.0.5",
+    "@nestjs/testing": "^9.0.9",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.13.2",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^7.5.6",
+    "source-map-support": "^0.5.21",
+    "xlsx": "^0.18.5"
+  }
+}

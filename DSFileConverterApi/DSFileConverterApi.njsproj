@@ -1,0 +1,145 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>DSFileConverterApi</Name>
+    <RootNamespace>DSFileConverterApi</RootNamespace>
+    <SaveNodeJsSettingsInProjectFile>True</SaveNodeJsSettingsInProjectFile>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>51f00888-5090-41c6-87a9-5acda0508832</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>dist\main</StartupFile>
+    <StartWebBrowser>False</StartWebBrowser>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <EnableTypeScript>true</EnableTypeScript>
+    <StartWebBrowser>False</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="webpack.config.js" />
+    <None Include="src\main.ts" />
+    <Content Include=".gitattributes" />
+    <Content Include=".gitignore" />
+    <Content Include="dockerfile" />
+    <Content Include="LICENSE.txt" />
+    <Content Include="package-lock.json" />
+    <Content Include="package.json" />
+    <Content Include="README.md" />
+    <Content Include="src\common\decorators\roles.decorator.js" />
+    <Content Include="src\common\decorators\roles.decorator.js.map" />
+    <Content Include="src\common\filters\http-exception.filter.js" />
+    <Content Include="src\common\filters\http-exception.filter.js.map" />
+    <Content Include="src\common\guards\roles.guard.js" />
+    <Content Include="src\common\guards\roles.guard.js.map" />
+    <Content Include="src\common\interceptors\exception.interceptor.js" />
+    <Content Include="src\common\interceptors\exception.interceptor.js.map" />
+    <Content Include="src\common\interceptors\logging.interceptor.js" />
+    <Content Include="src\common\interceptors\logging.interceptor.js.map" />
+    <Content Include="src\common\interceptors\timeout.interceptor.js" />
+    <Content Include="src\common\interceptors\timeout.interceptor.js.map" />
+    <Content Include="src\common\middleware\logger.middleware.js" />
+    <Content Include="src\common\middleware\logger.middleware.js.map" />
+    <Content Include="src\common\pipes\parse-int.pipe.js" />
+    <Content Include="src\common\pipes\parse-int.pipe.js.map" />
+    <Content Include="src\common\pipes\validation.pipe.js" />
+    <Content Include="src\common\pipes\validation.pipe.js.map" />
+    <Content Include="tsconfig.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src\" />
+    <Folder Include="src\commands\" />
+    <Folder Include="src\common\" />
+    <Folder Include="src\common\decorators\" />
+    <Folder Include="src\common\Dtos\" />
+    <Folder Include="src\common\filters\" />
+    <Folder Include="src\common\guards\" />
+    <Folder Include="src\common\interceptors\" />
+    <Folder Include="src\common\middleware\" />
+    <Folder Include="src\common\pipes\" />
+    <Folder Include="src\core\" />
+    <Folder Include="src\core\interceptors\" />
+    <Folder Include="src\controllers\" />
+    <Folder Include="src\services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="src\AppModule.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\commands\commands.ts" />
+    <TypeScriptCompile Include="src\commands\insertline.ts" />
+    <TypeScriptCompile Include="src\commands\txttoods.ts" />
+    <TypeScriptCompile Include="src\common\decorators\roles.decorator.ts" />
+    <TypeScriptCompile Include="src\common\Dtos\converteroptions.ts" />
+    <TypeScriptCompile Include="src\common\Dtos\filesdto.ts" />
+    <TypeScriptCompile Include="src\common\Dtos\foldersDto.ts" />
+    <TypeScriptCompile Include="src\common\filters\http-exception.filter.ts" />
+    <TypeScriptCompile Include="src\common\guards\roles.guard.ts" />
+    <TypeScriptCompile Include="src\common\interceptors\exception.interceptor.ts" />
+    <TypeScriptCompile Include="src\common\interceptors\logging.interceptor.ts" />
+    <TypeScriptCompile Include="src\common\interceptors\timeout.interceptor.ts" />
+    <TypeScriptCompile Include="src\common\middleware\logger.middleware.ts" />
+    <TypeScriptCompile Include="src\common\pipes\parse-int.pipe.ts" />
+    <TypeScriptCompile Include="src\common\pipes\validation.pipe.ts" />
+    <TypeScriptCompile Include="src\controllers\converter.controller.ts" />
+    <TypeScriptCompile Include="src\controllers\converter.module.ts" />
+    <TypeScriptCompile Include="src\core\core.module.ts" />
+    <TypeScriptCompile Include="src\core\interceptors\logging.interceptor.ts" />
+    <TypeScriptCompile Include="src\core\interceptors\transform.interceptor.ts" />
+    <TypeScriptCompile Include="src\services\files.service.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
