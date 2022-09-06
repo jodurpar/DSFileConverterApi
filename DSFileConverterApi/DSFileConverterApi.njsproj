@@ -30,6 +30,7 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="webpack.production.js" />
     <Content Include="webpack.config.js" />
     <None Include="src\main.ts" />
     <Content Include=".gitattributes" />
@@ -38,7 +39,6 @@
     <Content Include="LICENSE.txt" />
     <Content Include="package-lock.json" />
     <Content Include="package.json" />
-    <Content Include="README.md" />
     <Content Include="src\common\decorators\roles.decorator.js" />
     <Content Include="src\common\decorators\roles.decorator.js.map" />
     <Content Include="src\common\filters\http-exception.filter.js" />

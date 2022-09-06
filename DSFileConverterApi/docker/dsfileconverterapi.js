@@ -93,7 +93,7 @@ eval("\r\nvar __decorate = (this && this.__decorate) || function (decorators, ta
 /***/ ((module, exports, __webpack_require__) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nconst core_1 = __webpack_require__(/*! @nestjs/core */ \"@nestjs/core\");\r\nconst swagger_1 = __webpack_require__(/*! @nestjs/swagger */ \"@nestjs/swagger\");\r\nconst appmodule_1 = __webpack_require__(/*! ./appmodule */ \"./src/appmodule.ts\");\r\nasync function bootstrap() {\r\n    try {\r\n        const app = await core_1.NestFactory.create(appmodule_1.AppModule);\r\n        const config = new swagger_1.DocumentBuilder()\r\n            .setTitle('File Converter')\r\n            .setDescription('The files format converter API')\r\n            .setVersion('1.0')\r\n            .addBearerAuth()\r\n            .build();\r\n        const document = swagger_1.SwaggerModule.createDocument(app, config);\r\n        swagger_1.SwaggerModule.setup('swagger', app, document);\r\n        await app.listen(3001);\r\n        if (true) {\r\n            module.hot.accept();\r\n            module.hot.dispose(() => app.close());\r\n        }\r\n        console.log(`Application is running on: ${await app.getUrl()}`);\r\n    }\r\n    catch (error) {\r\n        console.log(error.message);\r\n    }\r\n}\r\nbootstrap();\r\n\n\n//# sourceURL=webpack://dsfile-converter-api/./src/main.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nconst core_1 = __webpack_require__(/*! @nestjs/core */ \"@nestjs/core\");\r\nconst swagger_1 = __webpack_require__(/*! @nestjs/swagger */ \"@nestjs/swagger\");\r\nconst appmodule_1 = __webpack_require__(/*! ./appmodule */ \"./src/appmodule.ts\");\r\nasync function bootstrap() {\r\n    try {\r\n        const app = await core_1.NestFactory.create(appmodule_1.AppModule);\r\n        const config = new swagger_1.DocumentBuilder()\r\n            .setTitle('File Converter')\r\n            .setDescription('The files format converter API')\r\n            .setVersion('1.0')\r\n            .addBearerAuth()\r\n            .build();\r\n        const document = swagger_1.SwaggerModule.createDocument(app, config);\r\n        swagger_1.SwaggerModule.setup('swagger', app, document);\r\n        await app.listen(52001);\r\n        if (true) {\r\n            module.hot.accept();\r\n            module.hot.dispose(() => app.close());\r\n        }\r\n        console.log(`Application is running on: ${await app.getUrl()}`);\r\n    }\r\n    catch (error) {\r\n        console.log(error.message);\r\n    }\r\n}\r\nbootstrap();\r\n\n\n//# sourceURL=webpack://dsfile-converter-api/./src/main.ts?");
 
 /***/ }),
 
@@ -276,7 +276,7 @@ module.exports = require("fs");
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("01c9e68a98d5d6fe5f16")
+/******/ 		__webpack_require__.h = () => ("c6431b6af538fefd7e53")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */

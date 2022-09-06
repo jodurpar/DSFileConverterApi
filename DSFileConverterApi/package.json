@@ -9,7 +9,8 @@
   "scripts": {
     "build": "tsc --build",
     "clean": "tsc --build --clean",
-    "start:dev": "webpack --config webpack.config.js --watch"
+    "start:dev": "webpack --config webpack.config.js --watch",
+    "start:pro": "webpack --config webpack.production.js --watch"
   },
   "devDependencies": {
     "@types/jest": "^28.1.7",

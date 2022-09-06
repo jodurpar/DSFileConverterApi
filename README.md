@@ -18,7 +18,6 @@
 ### In development command propmt
 
 - npm run start:dev
-- 
 
 
 ### Webpack
@@ -27,15 +26,17 @@
    ```javascript
     "outDir": "./dist",
    ```
-- Run webpack in the dist folder command prompt. This make a /dist folder with DsFileConverterApi.js file.
-- At command prompt: webpack --config=webpack.config.js
+- Run webpack --config=webpack.config.js at command prompt. This make a /dist folder with DsFileConverterApi.js file.
+OR
+- Run webpack --config=webpack.production.js at command prompt. This make a production code in  /dist folder with DsFileConverterApi.js file.
 
 ### Docker container.
 
 - There are a docker file in the root folder. Run docker build to make a docker image. 
 - Build docker image: docker build -t dsfileconverterapi:latest .
-- Create container either portainer, kitematic, docker desktop or another docker tool
-- Run container
+- Create container either portainer, kitematic, docker desktop or another docker tool 
+- Must mount one host folder in to docker to read from and write to files
+- or use command propmpt: docker run dsfileconverterapi:latest -p 52001:52001 -v "YourHostFolder:DockerFolder"
 
 ## Uninstall
 
@@ -45,11 +46,8 @@
 ## Usage
 
 - Run swagger from this api
-  - localhost:3001 (you can map this in container creation)
-  
-  ![Swagger Screen](https://github.com/jodurpar/DSMongoDBApi/blob/master/BrowserSwagger.png)
-     
-- The api was configurate to run in localhost:3001
+  - localhost:52001/swagger (you can map this in container creation)
+  - The api was configurate to run in localhost:52001
 
 ### Author
 
@@ -59,5 +57,5 @@
 
 ### License
 
-Copyright (C) 2022 [José Durán Pareja](https://github.com/jodurpar).
+Copyright (&copy;) 2022 [José Durán Pareja](https://github.com/jodurpar).
 
