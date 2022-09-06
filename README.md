@@ -58,5 +58,6 @@ OR
 ### License
 
 Copyright (&copy;) 2022 [José Durán Pareja](https://github.com/jodurpar).
+
 Portions of (&copy;) https://sheetjs.com/ Community Edition 
 
