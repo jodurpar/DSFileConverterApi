@@ -17,5 +17,5 @@ WORKDIR ./app
 
 RUN ls -la /app/*
 
-EXPOSE 51234
+EXPOSE 51240
 CMD ["node", "dsfileconverterapi"]

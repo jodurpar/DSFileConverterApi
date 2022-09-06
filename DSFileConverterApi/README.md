@@ -12,8 +12,13 @@
 ### In visual studio 2019/2022
 
 - Clone this project
-- To run and debug in visual studio environments, remove "outDir" line of "compilerOptions" element in tsconfig.json file.
+- To run and debug in visual studio environments.
 - Type F5 or start debugging
+
+### In development command propmt
+
+- npm run start:dev
+- 
 
 
 ### Webpack
