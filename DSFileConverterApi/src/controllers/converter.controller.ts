@@ -10,7 +10,7 @@ import { ConverterOptions } from '../common/Dtos/converterOptions';
 @Controller('Converter')
 export class ConverterController {
     @Post()
-    @ApiOperation({ summary: 'Convert tst file to ods format' })
+    @ApiOperation({ summary: 'Convert txt file to ods format' })
     @ApiResponse({ status: 201, description: 'File created.'})
     @ApiResponse({ status: 409, description: 'Do not have permisions to write file.' })
     @ApiBody({ type: ConverterOptions  })
