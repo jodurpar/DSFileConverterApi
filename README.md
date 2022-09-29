@@ -1,5 +1,13 @@
 # DSFileConverterApi
 
+## Purpouse
+
+On many occasions we find ourselves with the need to convert files to and from excel and for this we need to install the office dll.
+
+This api has been co-developed with a command line utility "DSFileConverter" to solve this problem.
+
+### You don't need to have Office or any other external dependencies for this.
+
 ## Install
 
 ### In command prompt
